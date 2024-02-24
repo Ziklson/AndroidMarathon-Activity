@@ -3,7 +3,9 @@
 При запуске приложения получаем следующие логи от методов activity
 
 2024-02-24 19:03:15.103  5028-5028  MainActivity            com.example.businesscard             D  onCreate LOG MESSAGE
+
 2024-02-24 19:03:15.123  5028-5028  MainActivity            com.example.businesscard             D  onStart LOG MESSAGE
+
 2024-02-24 19:03:15.130  5028-5028  MainActivity            com.example.businesscard             D  onResume LOG MESSAGE
 
 Согласно жизненому циклу Activity, который был представлен в видосе.
@@ -21,11 +23,15 @@
 При повороте экрана получаем следующие логи
 
 2024-02-24 19:04:47.312  5028-5028  MainActivity            com.example.businesscard             D  onPause LOG MESSAGE
+
 2024-02-24 19:04:47.323  5028-5028  MainActivity            com.example.businesscard             D  onStop LOG MESSAGE
+
 2024-02-24 19:04:47.368  5028-5028  MainActivity            com.example.businesscard             D  onDestroy LOG MESSAGE
 
 2024-02-24 19:04:47.590  5028-5028  MainActivity            com.example.businesscard             D  onCreate LOG MESSAGE
+
 2024-02-24 19:04:47.611  5028-5028  MainActivity            com.example.businesscard             D  onStart LOG MESSAGE
+
 2024-02-24 19:04:47.617  5028-5028  MainActivity            com.example.businesscard             D  onResume LOG MESSAGE
 
 Здесь, сначала вызываются методы уничтожения нашего Activity
@@ -41,6 +47,7 @@
 При сворачивании приложения получаем следующие логи
 
 2024-02-24 19:05:50.478  5028-5028  MainActivity            com.example.businesscard             D  onPause LOG MESSAGE
+
 2024-02-24 19:05:51.549  5028-5028  MainActivity            com.example.businesscard             D  onStop LOG MESSAGE
 
 onPause() - пользователь больше не может взаимодействовать с нашим приложением
@@ -53,6 +60,7 @@ onStop() - пользователь больше не видит наше при
 При разворачивании приложения
 
 2024-02-24 19:06:38.540  5028-5028  MainActivity            com.example.businesscard             D  onStart LOG MESSAGE
+
 2024-02-24 19:06:38.543  5028-5028  MainActivity            com.example.businesscard             D  onResume LOG MESSAGE
 
 ![СнимокРазворотПриложения](https://github.com/Ziklson/AndroidMarathon-Activity/assets/96010534/3232f587-c22e-43a7-8fde-ec04674e5c32)
@@ -65,6 +73,7 @@ onResume() - пользователь может взаимодействова�
 При добавлении вызова finish() в onCreate()
 
 2024-02-24 19:08:24.055  5588-5588  MainActivity            com.example.businesscard             D  onCreate LOG MESSAGE
+
 2024-02-24 19:08:24.972  5588-5588  MainActivity            com.example.businesscard             D  onDestroy LOG MESSAGE
 
 Приложение только создалось, не успело показаться пользователю, т.к. вызвался метод finish() и уничтожилось onDestroy()
