@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">BusinessCard</string>
+    <string name="full_name">Aleksey Kuvarin</string>
+    <string name="title">Java developer</string>
+    <string name="phone_number">+7 (932) 534-07-65</string>
+    <string name="social_media">\@Etothezik</string>
+    <string name="email">etothezik@gmail.com</string>
+    <string name="tag_log">MainActivity</string>
+</resources>
