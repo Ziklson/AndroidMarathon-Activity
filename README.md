@@ -1,12 +1,12 @@
-Проверка вызова нужных методов.
+// Проверка вызова нужных методов.
 
 При запуске приложения получаем следующие логи от методов activity
 
-2024-02-24 19:03:15.103  5028-5028  MainActivity            com.example.businesscard             D  onCreate LOG MESSAGE
+2024-02-24 22:06:58.576  5776-5776  MainActivity            com.example.businesscard             D  onCreate LOG MESSAGE
 
-2024-02-24 19:03:15.123  5028-5028  MainActivity            com.example.businesscard             D  onStart LOG MESSAGE
+2024-02-24 22:06:58.594  5776-5776  MainActivity            com.example.businesscard             D  onStart LOG MESSAGE
 
-2024-02-24 19:03:15.130  5028-5028  MainActivity            com.example.businesscard             D  onResume LOG MESSAGE
+2024-02-24 22:06:58.600  5776-5776  MainActivity            com.example.businesscard             D  onResume LOG MESSAGE
 
 Согласно жизненому циклу Activity, который был представлен в видосе.
 Вызываются 3 метода на создание Activity.
@@ -16,23 +16,23 @@
 Затем - OnStart() - Показываем наш макет пользователю, но он не может с ним взаимодействовать
 и затем OnResume() - После вызова этого метода, пользователь может взаимодействовать с нашим приложением
 
+![ЗапускПриложенияЛоги](https://github.com/Ziklson/AndroidMarathon-Activity/assets/96010534/86cc6a96-6cfc-4c5b-91aa-124469790efb)
 
 
-![ЗапускПриложенияЛоги](https://github.com/Ziklson/AndroidMarathon-Activity/assets/96010534/530a43c4-06d3-4a4a-ab40-0ca62befad95)
 
-При повороте экрана получаем следующие логи
+// При повороте экрана получаем следующие логи
 
-2024-02-24 19:04:47.312  5028-5028  MainActivity            com.example.businesscard             D  onPause LOG MESSAGE
+2024-02-24 22:07:57.909  5776-5776  MainActivity            com.example.businesscard             D  onPause LOG MESSAGE
 
-2024-02-24 19:04:47.323  5028-5028  MainActivity            com.example.businesscard             D  onStop LOG MESSAGE
+2024-02-24 22:07:57.930  5776-5776  MainActivity            com.example.businesscard             D  onStop LOG MESSAGE
 
-2024-02-24 19:04:47.368  5028-5028  MainActivity            com.example.businesscard             D  onDestroy LOG MESSAGE
+2024-02-24 22:07:58.028  5776-5776  MainActivity            com.example.businesscard             D  onDestroy LOG MESSAGE
 
-2024-02-24 19:04:47.590  5028-5028  MainActivity            com.example.businesscard             D  onCreate LOG MESSAGE
+2024-02-24 22:07:58.489  5776-5776  MainActivity            com.example.businesscard             D  onCreate LOG MESSAGE
 
-2024-02-24 19:04:47.611  5028-5028  MainActivity            com.example.businesscard             D  onStart LOG MESSAGE
+2024-02-24 22:07:58.499  5776-5776  MainActivity            com.example.businesscard             D  onStart LOG MESSAGE
 
-2024-02-24 19:04:47.617  5028-5028  MainActivity            com.example.businesscard             D  onResume LOG MESSAGE
+2024-02-24 22:07:58.518  5776-5776  MainActivity            com.example.businesscard             D  onResume LOG MESSAGE
 
 Здесь, сначала вызываются методы уничтожения нашего Activity
 Сначала получаем callBack onClose() после него пользователь не может взаимодействовать с нашим приложением, т.е. он все еще видит его, но клики и свайпы не обрабатываются системой
@@ -41,44 +41,48 @@
 
 Дальше вызываются 3 метода на создание Activity, как при изначальном запуске нашего приложения
 
-![СнимокЛогиПоворот](https://github.com/Ziklson/AndroidMarathon-Activity/assets/96010534/13624fa2-e7b9-4ceb-ae63-8f7342d07fb4)
+![СнимокЛогиПоворот](https://github.com/Ziklson/AndroidMarathon-Activity/assets/96010534/a9d9bab7-3703-476e-991b-8d20de57a4a7)
 
 
-При сворачивании приложения получаем следующие логи
 
-2024-02-24 19:05:50.478  5028-5028  MainActivity            com.example.businesscard             D  onPause LOG MESSAGE
+// При сворачивании приложения получаем следующие логи
 
-2024-02-24 19:05:51.549  5028-5028  MainActivity            com.example.businesscard             D  onStop LOG MESSAGE
+2024-02-24 22:09:31.786  5776-5776  MainActivity            com.example.businesscard             D  onPause LOG MESSAGE
+
+2024-02-24 22:09:32.861  5776-5776  MainActivity            com.example.businesscard             D  onStop LOG MESSAGE
 
 onPause() - пользователь больше не может взаимодействовать с нашим приложением
 onStop() - пользователь больше не видит наше приложение
 
-![СнимокСвернутьПриложение](https://github.com/Ziklson/AndroidMarathon-Activity/assets/96010534/ab8b0114-f523-4a3f-b913-cb4c28c961a2)
+![СнимокСвернутьПриложение](https://github.com/Ziklson/AndroidMarathon-Activity/assets/96010534/73831ed2-bbe9-4582-9adf-3d5a4972b950)
 
 
 
-При разворачивании приложения
+// При разворачивании приложения
 
-2024-02-24 19:06:38.540  5028-5028  MainActivity            com.example.businesscard             D  onStart LOG MESSAGE
+2024-02-24 22:10:09.348  5776-5776  MainActivity            com.example.businesscard             D  onRestart LOG MESSAGE
 
-2024-02-24 19:06:38.543  5028-5028  MainActivity            com.example.businesscard             D  onResume LOG MESSAGE
+2024-02-24 22:10:09.349  5776-5776  MainActivity            com.example.businesscard             D  onStart LOG MESSAGE
 
-![СнимокРазворотПриложения](https://github.com/Ziklson/AndroidMarathon-Activity/assets/96010534/3232f587-c22e-43a7-8fde-ec04674e5c32)
+2024-02-24 22:10:09.351  5776-5776  MainActivity            com.example.businesscard             D  onResume LOG MESSAGE
 
-
-
+onRestart() - обычно используется для восстановления состояния приложения, которое могло изменится во время остановки
 onStart() - пользователь видит наше приложение
 onResume() - пользователь может взаимодействовать с нашим приложением
 
-При добавлении вызова finish() в onCreate()
 
-2024-02-24 19:08:24.055  5588-5588  MainActivity            com.example.businesscard             D  onCreate LOG MESSAGE
+![СнимокРазворотПриложения](https://github.com/Ziklson/AndroidMarathon-Activity/assets/96010534/8ef5b0cf-5a10-45f1-b7c1-8fb4573943fc)
 
-2024-02-24 19:08:24.972  5588-5588  MainActivity            com.example.businesscard             D  onDestroy LOG MESSAGE
+
+
+// При добавлении вызова finish() в onCreate()
+
+2024-02-24 22:13:06.555  5954-5954  MainActivity            com.example.businesscard             D  onCreate LOG MESSAGE
+
+2024-02-24 22:13:07.437  5954-5954  MainActivity            com.example.businesscard             D  onDestroy LOG MESSAGE
 
 Приложение только создалось, не успело показаться пользователю, т.к. вызвался метод finish() и уничтожилось onDestroy()
 
-![СнимокFinishвOnCreate](https://github.com/Ziklson/AndroidMarathon-Activity/assets/96010534/29fd803b-d6e6-4d8a-95c3-1a176a5b51eb)
-
+![СнимокFinishвOnCreate](https://github.com/Ziklson/AndroidMarathon-Activity/assets/96010534/1dbf673a-d8b3-4513-b036-01c62e2ba374)
 
 
