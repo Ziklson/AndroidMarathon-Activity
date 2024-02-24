@@ -72,6 +72,11 @@ class MainActivity : ComponentActivity() {
         Log.d(getString(R.string.tag_log), "onDestroy LOG MESSAGE")
     }
 
+    override fun onRestart() {
+        super.onRestart()
+        Log.d(getString(R.string.tag_log), "onRestart LOG MESSAGE")
+    }
+
 }
 
 @Composable
@@ -94,6 +99,7 @@ fun BusinessCard() {
             text = stringResource(R.string.full_name),
             fontSize = 45.sp,
             color = Color.Black,
+            modifier = Modifier.padding(horizontal = 10.dp),
         )
         Text(
             text = stringResource(R.string.title),
@@ -131,6 +137,7 @@ fun ContactRow(
             contentDescription = null,
             tint = Color(0xFF006D3B),
             modifier = Modifier.weight(1f)
+
         )
         Text(
             text = text,
